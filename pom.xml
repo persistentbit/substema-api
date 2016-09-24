@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.persistentbit</groupId>
+    <artifactId>substema-api</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>SUBSTEMA-API</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.persistentbit</groupId>
+            <artifactId>substema</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.persistentbit</groupId>
+                <artifactId>substema-maven-plugin</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals><goal>generate-sources</goal></goals>
+                        <configuration>
+                            <sources>
+                                <source>com.persistentbit.substema.api.rod</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

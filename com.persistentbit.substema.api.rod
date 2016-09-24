@@ -1,0 +1,89 @@
+value class RClass{
+    packageName:String;
+    className:String;
+}
+
+value class REnum {
+    name:RClass;
+    values:List<String>;
+
+}
+
+value class RFunctionParam{
+    name:String;
+    valueType:RValueType;
+}
+
+value class RValueType{
+
+}
+
+value class RFunction {
+    name:String;
+    params:List<RFunctionParam>;
+    clientCached:Boolean;
+    resultType:?RValueType;
+}
+
+value class RProperty{
+    name:String;
+    valueType:RValueType;
+    defaultValue:?RValue;
+}
+
+value class RInterfaceClass {
+    name:RClass;
+    properties:List<RProperty>;
+}
+
+value class RRemoteClass{
+    name:RClass;
+    functions:List<RFunction>;
+}
+
+value class RValueClass{
+    typeSig:RTypeSig;
+    properties:List<RProperty>;
+    interfaceClasses:List<RClass>;
+}
+
+value class RService {
+    packageName:String;
+    enums:List<REnum>;
+    valueClasses:List<RValueClass>;
+    remoteClasses:List<RRemoteClass>;
+    interfaceClasses:List<RInterfaceClass>;
+
+}
+
+value class RTypeSig {
+    name:RClass;
+    generics:List<RTypeSig>;
+}
+
+
+interface RValue{
+
+}
+
+value class RValueArray implements RValue {
+    values:List<RValue>;
+}
+
+value class GeneratedJava {
+    name:RClass;
+    code:String;
+}
+
+value class JavaGenOptions {
+    generateGetters:Boolean;
+    generateSetters:Boolean;
+}
+
+remote class ServiceJavaGen{
+    generate(options:JavaGenOptions,packageName:String, service:RService):List<GeneratedJava>;
+}
+
+remote class RodCompiler {
+
+}
