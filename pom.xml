@@ -29,7 +29,7 @@
                         <goals><goal>generate-sources</goal></goals>
                         <configuration>
                             <sources>
-                                <source>com.persistentbit.substema.api.rod</source>
+                                <source>com.persistentbit.substema.api.substema</source>
                             </sources>
                         </configuration>
                     </execution>
