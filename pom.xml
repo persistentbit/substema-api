@@ -26,11 +26,12 @@
                 <executions>
                     <execution>
                         <phase>generate-sources</phase>
-                        <goals><goal>generate-sources</goal></goals>
+                        <goals><goal>generate-packages</goal></goals>
                         <configuration>
-                            <sources>
-                                <source>com.persistentbit.substema.api.substema</source>
-                            </sources>
+                            <packages>
+                                <package>com.persistentbit.substema.api</package>
+                                <package>com.persistentbit.substema.api.javagen</package>
+                            </packages>
                         </configuration>
                     </execution>
                 </executions>

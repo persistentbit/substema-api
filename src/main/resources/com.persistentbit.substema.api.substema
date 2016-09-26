@@ -1,3 +1,8 @@
+
+
+
+
+
 value class RClass{
     packageName:String;
     className:String;
@@ -70,19 +75,7 @@ value class RValueArray implements RValue {
     values:List<RValue>;
 }
 
-value class GeneratedJava {
-    name:RClass;
-    code:String;
-}
 
-value class JavaGenOptions {
-    generateGetters:Boolean;
-    generateSetters:Boolean;
-}
-
-remote class ServiceJavaGen{
-    generate(options:JavaGenOptions,packageName:String, service:RService):List<GeneratedJava>;
-}
 
 remote class RodCompiler {
 
