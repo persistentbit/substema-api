@@ -3,56 +3,56 @@
 
 
 
-value class RClass{
+case class RClass{
     packageName:String;
     className:String;
 }
 
-value class REnum {
+case class REnum {
     name:RClass;
     values:List<String>;
 
 }
 
-value class RFunctionParam{
+case class RFunctionParam{
     name:String;
     valueType:RValueType;
 }
 
-value class RValueType{
+case class RValueType{
 
 }
 
-value class RFunction {
+case class RFunction {
     name:String;
     params:List<RFunctionParam>;
     clientCached:Boolean;
     resultType:?RValueType;
 }
 
-value class RProperty{
+case class RProperty{
     name:String;
     valueType:RValueType;
     defaultValue:?RValue;
 }
 
-value class RInterfaceClass {
+case class RInterfaceClass {
     name:RClass;
     properties:List<RProperty>;
 }
 
-value class RRemoteClass{
+case class RRemoteClass{
     name:RClass;
     functions:List<RFunction>;
 }
 
-value class RValueClass{
+case class RValueClass{
     typeSig:RTypeSig;
     properties:List<RProperty>;
     interfaceClasses:List<RClass>;
 }
 
-value class RService {
+case class RService {
     packageName:String;
     enums:List<REnum>;
     valueClasses:List<RValueClass>;
@@ -61,7 +61,7 @@ value class RService {
 
 }
 
-value class RTypeSig {
+case class RTypeSig {
     name:RClass;
     generics:List<RTypeSig>;
 }
@@ -71,7 +71,7 @@ interface RValue{
 
 }
 
-value class RValueArray implements RValue {
+case class RValueArray implements RValue {
     values:List<RValue>;
 }
 

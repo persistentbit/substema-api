@@ -1,12 +1,12 @@
 import com.persistentbit.substema.api;
 
 
-value class GeneratedJava {
+case class GeneratedJava {
     name:RClass;
     code:String;
 }
 
-value class JavaGenOptions {
+case class JavaGenOptions {
     generateGetters:Boolean;
     generateSetters:Boolean;
 }
