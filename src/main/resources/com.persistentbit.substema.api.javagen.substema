@@ -7,8 +7,8 @@ case class GeneratedJava {
 }
 
 case class JavaGenOptions {
-    generateGetters:Boolean;
-    generateSetters:Boolean;
+    generateGetters:Boolean = true;
+    generateSetters:Boolean = true;
 }
 
 remote class ServiceJavaGen{
