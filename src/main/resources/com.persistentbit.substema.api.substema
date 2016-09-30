@@ -4,23 +4,24 @@
 
 
 case class RClass{
-    packageName:String;
+    packageName:String = "Hello...";
     className:String;
 }
 
 case class REnum {
     name:RClass;
-    values:List<String>;
+    values:List<String> = [];
 
 }
 
 case class RFunctionParam{
     name:String;
-    valueType:RValueType;
+    valueType:RValueType = new RValueType(typeSig: new RTypeSig(name:new RClass(className:"Hello")) ,required:true);
 }
 
 case class RValueType{
-
+    typeSig:RTypeSig;
+    required:Boolean;
 }
 
 case class RFunction {
@@ -33,7 +34,7 @@ case class RFunction {
 case class RProperty{
     name:String;
     valueType:RValueType;
-    defaultValue:?RValue;
+    defaultValue:?RValue = null;
 }
 
 case class RInterfaceClass {
@@ -63,7 +64,7 @@ case class RService {
 
 case class RTypeSig {
     name:RClass;
-    generics:List<RTypeSig>;
+    generics:List<RTypeSig> = [];
 }
 
 
