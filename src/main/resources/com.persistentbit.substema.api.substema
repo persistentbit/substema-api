@@ -68,6 +68,13 @@ case class RTypeSig {
 }
 
 
+case class DatesTest {
+    justADate:Date;
+    aDateWithTime:DateTime;
+
+}
+
+
 interface RValue{
 
 }
