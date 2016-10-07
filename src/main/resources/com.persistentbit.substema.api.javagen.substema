@@ -12,5 +12,5 @@ case class JavaGenOptions {
 }
 
 remote class ServiceJavaGen{
-    generate(options:JavaGenOptions,packageName:String, service:RService):List<GeneratedJava>;
+    generate(options:JavaGenOptions,packageName:String, substema:RService):List<GeneratedJava>;
 }
